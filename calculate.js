@@ -1,8 +1,9 @@
 
 
 function calculate(billAmount,tipDescription,amountOfPeople){
-  billAmount = Number(billAmount)
+  billAmount =  Number(billAmount)
   amountOfPeople = Number(amountOfPeople)
+
   if (tipDescription === 'great' 
   || tipDescription === "excellent" 
   || tipDescription === 'awesome' 
@@ -31,4 +32,4 @@ function calculate(billAmount,tipDescription,amountOfPeople){
 return billAmount * tipDescription / amountOfPeople
 } 
 
-module.exports = calculate;
+module.exports = calculate; 
