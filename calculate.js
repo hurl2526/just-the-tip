@@ -1,6 +1,8 @@
 
 
 function calculate(billAmount,tipDescription,amountOfPeople){
+  billAmount = Number(billAmount)
+  amountOfPeople = Number(amountOfPeople)
   if (tipDescription === 'great' 
   || tipDescription === "excellent" 
   || tipDescription === 'awesome' 
@@ -23,19 +25,10 @@ function calculate(billAmount,tipDescription,amountOfPeople){
   || tipDescription === 'crap'
   || tipDescription === 'terrible') {
     tipDescription = 5 / 100}
-    else if (tipDescription !== NaN)
+    else if (tipDescription === NaN)
     tipDescription = Number(tipDescription)
     else {tipDescription= 20 / 100}
-    
-  billAmount = Number(billAmount)
-  amountOfPeople = Number(amountOfPeople)
 return billAmount * tipDescription / amountOfPeople
-}  
-
-
-if (typeof calculate === 'undefined') {
-  calculate = undefined;
-}
-
+} 
 
 module.exports = calculate;
